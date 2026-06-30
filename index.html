@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XPO ⇄ TikTok — Budget Converter</title>
+<title>XPO ⇄ TikTok & Google — Budget Converter</title>
 <style>
   :root{
     --bg:#0f1714;
@@ -157,9 +157,9 @@
 <body>
 <div class="wrap">
   <div class="head">
-    <div class="kicker">PMC · TikTok ⇄ XPO</div>
+    <div class="kicker">PMC · TikTok & Google ⇄ XPO</div>
     <h1>Budget Converter</h1>
-    <p class="sub">พิมพ์ฝั่งไหนก็ได้ อีกฝั่งคำนวนให้เอง · XPO = TikTok × rate · แก้ rate ได้ตามแต่ละแอค</p>
+    <p class="sub">พิมพ์ฝั่งไหนก็ได้ อีกฝั่งคำนวนให้เอง · XPO = TikTok or Google × rate · แก้ rate ได้ตามแต่ละแอค</p>
   </div>
 
   <div class="card">
@@ -185,7 +185,7 @@
     <!-- TikTok -->
     <div class="field tt">
       <div class="field-label">
-        <span class="name">TikTok (ใส่ใน Ads Manager)</span>
+        <span class="name">TikTok or Google (ใส่ใน Ads Manager)</span>
         <span class="hint">ตัวที่ต้องไปกรอกจริง</span>
       </div>
       <div class="input-row">
@@ -197,7 +197,7 @@
     <!-- rate -->
     <div class="rate">
       <div class="rate-label">
-        Markup ของ XPO<br><b id="invHint">TikTok = XPO × 0.5500</b>
+        Markup ของ XPO<br><b id="invHint">TikTok or Google = XPO × 0.5500</b>
       </div>
       <div class="rate-input">
         <button class="reset" id="reset" title="กลับไป 1.8182">รีเซ็ต</button>
@@ -210,7 +210,7 @@
   <!-- live check -->
   <div class="check">
     <div class="check-row">
-      <span class="k">ใส่บน TikTok</span>
+      <span class="k">ใส่บน TikTok or Google </span>
       <span class="v teal" id="ckTT">—</span>
     </div>
     <div class="check-row">
@@ -218,7 +218,7 @@
       <span class="v amber" id="ckXPO">—</span>
     </div>
     <div class="check-row">
-      <span class="k">เช็คย้อน (TikTok × rate)</span>
+      <span class="k">เช็คย้อน (TikTok or Google × rate)</span>
       <span class="v" id="ckBack">—</span>
     </div>
   </div>
@@ -260,7 +260,7 @@
   }
 
   function updateInvHint(){
-    invEl.textContent = 'TikTok = XPO × ' + (1/rate()).toFixed(4);
+    invEl.textContent = 'TikTok or Google = XPO × ' + (1/rate()).toFixed(4);
   }
 
   function updateCheck(){
